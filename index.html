@@ -8,6 +8,7 @@
       html, body {
         height: 100%;
         margin: 0;
+        overflow: hidden;
       }
       iframe {
         width: 100%;
@@ -17,6 +18,10 @@
     </style>
   </head>
   <body>
-    <iframe src="https://builder.bookipi.com/pages/kol-matrix-s-company-dd22"></iframe>
+    <iframe 
+      src="https://builder.bookipi.com/pages/kol-matrix-s-company-dd22" 
+      sandbox="allow-same-origin allow-scripts allow-popups allow-forms" 
+      onload="const links=this.contentDocument.querySelectorAll('a'); links.forEach(a=>a.setAttribute('target','_self'));"
+    ></iframe>
   </body>
 </html>
